@@ -1,24 +1,30 @@
+import { NgModule } from "@angular/core";
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
-import { routes } from './router';
 import { AppComponent } from './app.component';
 import { AppStoreModule } from './store/store.module';
-import { AboutComponent } from './about.component';
-import { RouterModule } from '@angular/router';
-import { externalModules } from './build-specific';
-import { declarations } from './core';
+
+const routes: Routes = [
+    { path: '', pathMatch: 'full', redirectTo: 'messages' },
+    {
+      path: 'messages',
+      loadChildren: () =>
+        import('./messages/messages.module').then((m) => m.MessagesModule),
+    },
+];
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent, declarations],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes),
-    AppStoreModule,
-    externalModules
-  ],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+            BrowserModule,
+            HttpClientModule,
+            AppStoreModule,
+            RouterModule.forRoot(routes)
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule {}

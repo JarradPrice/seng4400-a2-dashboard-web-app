@@ -1,15 +1,15 @@
-const data = require('../shared/product-data');
+const data = require('../shared/message-data');
 
 module.exports = async function (context, req) {
-  const product = {
+  const message = {
     id: undefined,
     name: req.body.name,
     description: req.body.description,
   };
 
   try {
-    const newProduct = data.addProduct(product);
-    context.res.status(201).json(newProduct);
+    const newMessage = data.addMessage(message);
+    context.res.status(201).json(newMessage);
   } catch (error) {
     context.res.status(500).send(error);
   }

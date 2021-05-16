@@ -1,5 +1,5 @@
 const data = {
-  products: [
+  messages: [
     {
       id: 10,
       name: 'Strawberries',
@@ -27,27 +27,27 @@ const getRandomInt = () => {
   return Math.floor(Math.random() * Math.floor(max) + min);
 };
 
-const addProduct = (product) => {
-  product.id = getRandomInt();
-  data.products.push(product);
-  return product;
+const addMessage = (message) => {
+  message.id = getRandomInt();
+  data.messages.push(message);
+  return message;
 };
 
-const updateProduct = (product) => {
-  const index = data.products.findIndex((v) => v.id === product.id);
-  console.log(product);
-  data.products.splice(index, 1, product);
-  return product;
+const updateMessage = (message) => {
+  const index = data.messages.findIndex((v) => v.id === message.id);
+  console.log(message);
+  data.messages.splice(index, 1, message);
+  return message;
 };
 
-const deleteProduct = (id) => {
+const deleteMessage = (id) => {
   const value = parseInt(id, 10);
-  data.products = data.products.filter((v) => v.id !== value);
+  data.messages = data.messages.filter((v) => v.id !== value);
   return true;
 };
 
-const getProducts = () => {
-  return data.products;
+const getMessages = () => {
+  return data.messages;
 };
 
-module.exports = { addProduct, updateProduct, deleteProduct, getProducts };
+module.exports = { addMessage, updateMessage, deleteMessage, getMessages };

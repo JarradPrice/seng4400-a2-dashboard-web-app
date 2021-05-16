@@ -3,11 +3,12 @@ import {
   EntityCollectionServiceBase,
   EntityCollectionServiceElementsFactory,
 } from '@ngrx/data';
-import { Product } from '../core';
+
+import { Message } from '../core';
 
 @Injectable({ providedIn: 'root' })
-export class ProductService extends EntityCollectionServiceBase<Product> {
+export class MessageService extends EntityCollectionServiceBase<Message> {
   constructor(serviceElementsFactory: EntityCollectionServiceElementsFactory) {
-    super('Product', serviceElementsFactory);
+    super('Message', serviceElementsFactory);
   }
 }
