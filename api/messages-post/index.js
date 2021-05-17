@@ -3,8 +3,8 @@ const data = require('../shared/message-data');
 module.exports = async function (context, req) {
   const message = {
     id: undefined,
-    name: req.body.name,
-    description: req.body.description,
+    answer: req.body.answer,
+    time_taken: req.body.time_taken,
   };
 
   try {

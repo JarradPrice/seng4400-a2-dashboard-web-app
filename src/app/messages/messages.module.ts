@@ -24,7 +24,6 @@ const routes: Routes = [
     declarations: [
       MessagesComponent,
       MessageListComponent,
-      //MessageDetailComponent,
     ],
     providers: [MessageService]
   })

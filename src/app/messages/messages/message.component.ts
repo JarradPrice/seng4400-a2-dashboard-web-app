@@ -16,6 +16,9 @@ export class MessagesComponent implements OnInit {
     message = '?';
     messageToDelete: Message;
     showModal = false;
+
+    // for refresh every x seconds
+    intervalId: number;
   
     constructor(private messageService: MessageService) {
       this.messages$ = messageService.entities$;
@@ -23,6 +26,8 @@ export class MessagesComponent implements OnInit {
   
     ngOnInit() {
       this.getMessages();
+      // refresh message list every x seconds
+      this.intervalId = setInterval(() => this.getMessages(), 1000);
     }
   
     add(message: Message) {
@@ -78,6 +83,10 @@ export class MessagesComponent implements OnInit {
   
     update(message: Message) {
       this.messageService.update(message);
+    }
+
+    ngOnDestroy() {
+      clearInterval(this.intervalId);
     }
 }
 
