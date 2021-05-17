@@ -4,9 +4,9 @@ Project created for SENG4400 Assigment 2. Serves as the source repository for de
 
 Uses <https://github.com/MicrosoftDocs/mslearn-staticwebapp> as a base. 
 
-## Assignment 2 Dashboard
+## Message Dashboard
 
-Whenever the endpoint receives a message it updates a data store. You can then the web page listing the recent answers and how long they took to compute.
+Whenever the endpoint receives a message it updates a data store. You can then see the web page listing the recent answers and how long they took to compute.
 
 The web page refreshes its contents every second to show the latest answers.
 
@@ -30,7 +30,7 @@ GitHub Actions will run and go and deploy the web app. After it has deployed you
 ## Sending Messages
 
 To send messages to the web app create a HTTP POST to this address:
-- <<URL>>/api/messages
+- \<URL\>/api/messages
 The call must contain a JSON payload in the following format:
 ```
 {
