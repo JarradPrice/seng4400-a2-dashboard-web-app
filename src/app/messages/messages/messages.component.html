@@ -1,8 +1,6 @@
-<div class="content-container">
-    <div class="list-container">
-      <div *ngIf="messages$ | async as messages">
-          <app-message-list [messages]="messages">
-          </app-message-list>
-      </div>
-    </div>
+<div class="list-container">
+  <div *ngIf="messages$ | async as messages">
+      <app-message-list [messages]="messages">
+      </app-message-list>
   </div>
+</div>
