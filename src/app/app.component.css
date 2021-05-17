@@ -1,5 +1,17 @@
 .layout {
-  
+  font-family: BlinkMacSystemFont, 
+  -apple-system, 
+  "Segoe UI", 
+  "Roboto", 
+  "Oxygen", 
+  "Ubuntu", 
+  "Cantarell", 
+  "Fira Sans", 
+  "Droid Sans", 
+  "Helvetica Neue", 
+  "Helvetica", 
+  "Arial", 
+  sans-serif;
 }
 
 .content {
@@ -9,7 +21,12 @@
 
 .list-container {
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100em;
+  margin: 0 auto;
+  width: 70%;
+
+  border: solid 2px #ccc;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }

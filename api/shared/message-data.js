@@ -1,9 +1,7 @@
 const data = {
   messages: [
     {
-      id: 10,
-      answer: 2,
-      time_taken: 600,
+      
     },
   ],
 };
