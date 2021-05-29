@@ -25,7 +25,20 @@
   margin-bottom: 20px;
   width: 80%;
 
-  border: solid 2px #ccc;
+  border: solid 2px #ccc; 
+}
+
+.message-answer {
+  overflow-x: auto;
+}
+
+.answer-content {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  width: fit-content;
+  max-width: 5000px;
+  height: fit-content;
 
   overflow-wrap: break-word;
   word-wrap: break-word;

@@ -2,9 +2,9 @@
   <li *ngFor="let message of messages; trackBy: trackByMessage; let i = index">
     <div>
       <div><b>message#:</b>{{ message.id }}</div>
-      <details>
+      <details class="message-answer">
         <summary><b>answer:</b></summary>
-        <div>{{ message.answer }}</div>
+        <div class="answer-content">{{ message.answer }}</div>
       </details>
       <div><b>time_taken:</b> {{ message.time_taken }}</div>
     </div>
