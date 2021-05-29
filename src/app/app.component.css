@@ -40,7 +40,7 @@
   max-width: 5000px;
   height: fit-content;
 
-  overflow-wrap: break-word;
+  overflow-wrap: break-all;
   word-wrap: break-word;
   hyphens: auto;
 }
