@@ -1,8 +1,6 @@
 import {
     Component,
-    EventEmitter,
     Input,
-    Output,
     ChangeDetectionStrategy,
   } from '@angular/core';
   
@@ -17,18 +15,8 @@ import { Message } from '../../core';
 
 export class MessageListComponent {
   @Input() messages: Message[];
-  @Output() deleted = new EventEmitter<Message>();
-  @Output() selected = new EventEmitter<Message>();
 
   trackByMessage(index: number, message: Message): number {
     return message.id;
-  }
-
-  selectMessage(message: Message) {
-    this.selected.emit(message);
-  }
-
-  deleteMessage(message: Message) {
-    this.deleted.emit(message);
   }
 }
