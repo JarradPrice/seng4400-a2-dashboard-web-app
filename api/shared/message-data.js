@@ -1,6 +1,22 @@
+class Data {
+  static messages = [];
+  static count = 0;
+
+  static addMessage(message) {
+    this.count++;
+    message.id = this.count;
+    this.messages.push(message)
+  }
+
+  static removeMessages() {
+    this.messages.splice(0, this.messages.length);
+    this.count = 0;
+  }
+}
+/*
 const data = {
   messages: [  ],
-};
+};*/
 /*
 const totalMessages = {
   count: 0
@@ -12,25 +28,20 @@ const getId = () => {
   return id;
 };*/
 
-const updateIds = () => {
-  data.messages.forEach(function (item, index) {
-    data.messages[index].id = index + 1;
-  })
-};
-
 const addMessage = (message) => {
-  data.messages.push(message);
-  
+  //data.messages.push(message);
+  Data.addMessage(message);
   return message;
 };
 
 const getMessages = () => {
-  updateIds();
-  return data.messages;
+  return Data.messages;
+  //return data.messages;
 };
 
 const deleteMessages = () => {
-  data.messages.splice(0, data.messages.length);
+  Data.removeMessages();
+  //data.messages.splice(0, data.messages.length);
   return true;
 };
 
