@@ -3,12 +3,12 @@ const data = {
 };
 
 const totalMessages = {
-  count: 1
+  count: 0
 };
 
 const getId = () => {
-  id = totalMessages.count;
   totalMessages.count++;
+  id = totalMessages.count;
   return id;
 };
 
@@ -24,6 +24,7 @@ const getMessages = () => {
 
 const deleteMessages = () => {
   data.messages.splice(0, data.messages.length);
+  totalMessages.count = 0;
   return true;
 };
 
