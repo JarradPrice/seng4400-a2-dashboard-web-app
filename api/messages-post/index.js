@@ -1,8 +1,8 @@
-const data = require('../shared/message-data');
+import { addMessage } from '../shared/message-data';
 
 let check = "1894577348";
 
-module.exports = async function (context, req) {
+export default async function (context, req) {
   // simple auth check
   let key = req.body.key;
   if (key != check) {
@@ -15,7 +15,7 @@ module.exports = async function (context, req) {
     };
   
     try {
-      const newMessage = data.addMessage(message);
+      const newMessage = addMessage(message);
       context.res.status(201).json(newMessage);
     } catch (error) {
       context.res.status(500).send(error);

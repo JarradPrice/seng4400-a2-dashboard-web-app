@@ -1,8 +1,8 @@
-const data = require('../shared/message-data');
+import { deleteMessages } from '../shared/message-data';
 
-module.exports = async function (context, req) {
+export default async function (context, req) {
     try {
-      data.deleteMessages();
+      deleteMessages();
       context.res.status(200).json({});
     } catch (error) {
       context.res.status(500).send(error);
