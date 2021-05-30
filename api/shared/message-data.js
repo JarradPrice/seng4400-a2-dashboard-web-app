@@ -19,4 +19,9 @@ const getMessages = () => {
   return data.messages;
 };
 
-module.exports = { addMessage, getMessages };
+const deleteMessages = () => {
+  data.messages.splice(0, data.messages.length);
+  return true;
+};
+
+module.exports = { addMessage, getMessages, deleteMessages };
