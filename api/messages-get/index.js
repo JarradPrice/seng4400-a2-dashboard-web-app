@@ -1,8 +1,8 @@
-import { getMessages } from '../shared/message-data';
+const data = require('../shared/message-data');
 
-export default async function (context, req) {
+module.exports = async function (context, req) {
   try {
-    const messages = getMessages();
+    const messages = data.getMessages();
     context.res.status(200).json(messages);
   } catch (error) {
     context.res.status(500).send(error);

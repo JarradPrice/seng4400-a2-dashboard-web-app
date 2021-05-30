@@ -24,6 +24,7 @@ const getMessages = () => {
 
 const deleteMessages = () => {
   data.messages.splice(0, data.messages.length);
+  totalMessages.count = 0;
   return true;
 };
 
