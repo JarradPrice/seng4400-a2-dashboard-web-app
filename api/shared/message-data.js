@@ -1,11 +1,12 @@
 const data = {
   messages: [  ],
-  count: 1
 };
 
+const count = 1;
+
 const getId = () => {
-  id = data.count;
-  data.count++;
+  id = count;
+  count++;
   return id;
 };
 
