@@ -1,7 +1,7 @@
 <ul>
   <li *ngFor="let message of messages; trackBy: trackByMessage; let i = index">
     <div>
-      <div><b>message#:</b>{{ message.id }}</div>
+      <div><b>message#: </b>{{ message.id }}</div>
       <details class="message-answer">
         <summary><b>answer:</b></summary>
         <div class="answer-content">{{ message.answer }}</div>
